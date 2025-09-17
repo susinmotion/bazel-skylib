@@ -138,6 +138,27 @@ A string list-typed build setting that can be set on the command line
 | <a id="string_list_flag-scope"></a>scope |  The scope indicates where a flag can propagate to   | String | optional |  `"universal"`  |
 
 
+<a id="repeatable_string_flag"></a>
+ 
+## repeatable_string_flag
+
+<pre>
+load("@bazel_skylib//rules:common_settings.bzl", "repeatable_string_flag")
+
+repeatable_string_flag(<a href="#repeatable_string_flag-name">name</a>, <a href="#repeatable_string_flag-scope">scope</a>)
+</pre>
+
+A string-typed build setting that can be set on the command line. Multiple settings do not overwrite each other; they are concatenated into a list
+
+**ATTRIBUTES**
+
+
+| Name  | Description | Type | Mandatory | Default |
+| :------------- | :------------- | :------------- | :------------- | :------------- |
+| <a id="repeatable_string_flag-name"></a>name |  A unique name for this target.   | <a href="https://bazel.build/concepts/labels#target-names">Name</a> | required |  |
+| <a id="repeatable_string_flag-scope"></a>scope |  The scope indicates where a flag can propagate to   | String | optional |  `"universal"`  |
+
+
 <a id="string_list_setting"></a>
 
 ## string_list_setting
